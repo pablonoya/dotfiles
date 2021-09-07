@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      relink: true
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.zprofile: zprofile
+    ~/.condarc: condarc
+    ~/.config/kitty: kitty
+    ~/.config/neofetch: neofetch
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

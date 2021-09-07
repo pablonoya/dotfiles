@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function main() {
+    echo "Reseting bluetooth.service"
+    systemctl stop bluetooth.service
+    sleep 1s
+    systemctl start bluetooth.service
+    
+    echo "Bluetooth down"
+    hciconfig hci0 down
+    rmmod btusb
+    
+    sleep 2s
+    echo "Bluetooth up"
+    modprobe btusb
+    hciconfig hci0 up
+}
+
+if [ $(id -u) != 0 ]; then
+    echo "The script requires root permissions"
+    sudo bash -c "$(declare -f main); main"
+else
+ bash -c $(declare -f main)
+fi
