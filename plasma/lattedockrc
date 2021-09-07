@@ -1,0 +1,67 @@
+
+[ConfigDialog]
+Height 1080=528
+Width 1920=777
+eDP Height 1920x1080=553
+eDP Width 1920x1080=850
+
+[DownloadDialog Settings]
+HDMI-A-0 eDP Height 1920x1080=550
+HDMI-A-0 eDP Width 1920x1080=841
+
+[General]
+Number of Actions=0
+
+[KPropertiesDialog]
+HDMI-A-0 eDP Height 1920x1080=548
+HDMI-A-0 eDP Width 1920x1080=552
+Height 1080=488
+Width 1920=466
+eDP HDMI-A-0 Height 1920x1080=512
+eDP HDMI-A-0 Width 1920x1080=477
+eDP Height 1080=500
+eDP Height 1920x1080=512
+eDP Width 1920=465
+eDP Width 1920x1080=485
+eDP-1 Height 1080=500
+eDP-1 Width 1920=507
+
+[LatteSettingsDialog]
+downloadWindowSize=841,550
+windowSize=932,825
+
+[LatteSettingsDialog][DetailsDialog]
+windowSize=846,640
+
+[LatteSettingsDialog][TabLayouts]
+columnWidths=60,97,268,128
+sortColumn=3
+sortOrder=0
+
+[LatteSettingsDialog][ViewsDialog]
+columnWidths=59,256,142,135,131
+sortColumn=5
+sortOrder=1
+windowSize=980,673
+
+[PlasmaThemeExtended]
+outlineWidth=2
+
+[ScreenConnectors]
+10=eDP:::0,0 1920x1080
+12=HDMI-A-0:::1920,0 1920x1080
+
+[UniversalSettings]
+badges3DStyle=false
+canDisableBorders=true
+contextMenuActionsAlwaysShown=
+inAdvancedModeForEditSettings=true
+isAvailableGeometryBroadcastedToPlasma=true
+launchers=
+memoryUsage=0
+metaPressAndHoldEnabled=false
+mouseSensitivity=0
+screenTrackerInterval=1000
+showInfoWindow=true
+singleModeLayoutName=Custom
+version=2
