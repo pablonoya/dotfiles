@@ -1,0 +1,144 @@
+/*
+C O N F I G
+*/
+
+:root {
+  --bar-bg: #303035;
+  --tab-active-bg: #404045;
+}
+
+/* TABS */
+
+#tabbrowser-tabs {
+  --user-tab-rounding: 16px;
+}
+
+/*@media (-moz-proton) {
+  .tab-background {
+      border-radius: var(--user-tab-rounding) !important;
+  }
+}*/
+
+/* Show Close Button on active Tab and Mouseover */
+#TabsToolbar .tabbrowser-tab[selected="true"]:not([pinned]) .close-icon {
+  display: -moz-box !important;
+}
+#TabsToolbar .tabbrowser-tab:not([selected="true"]):not([pinned]):hover .close-icon {
+  display: -moz-box !important;
+}
+
+.tab-background[selected="true"] {
+  background: linear-gradient(to bottom, transparent 2px, #303942 2px, #303942 100%),
+    linear-gradient(
+      to right,
+      #765dff,
+      #5d7dff,
+      #3e8cff,
+      #1c99ff,
+      #00a5ff,
+      #00b4ff,
+      #00c3ff,
+      #00d0ff,
+      #00ddff
+    ) !important;
+}
+
+/* Tabs below urlbar */
+#titlebar {
+  -moz-box-ordinal-group: 3 !important;
+}
+
+/*
+B U T T O N S
+*/
+
+/* This one is the forward button  */
+#forward-button {
+  display: none !important;
+}
+
+/* This one is the back button  */
+/* #back-button { display: none !important; } */
+
+/* This one is the spacer between tabs and border  */
+.titlebar-spacer {
+  display: none !important;
+}
+
+/* This one is the "shield" icon  */
+/* #tracking-protection-icon-container { display: none !important; } */
+
+/* This one is the hamburger menu!  */
+/* #PanelUI-button { display: none !important; } */
+
+/* This one removes the close button  */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: none !important;
+}
+*/
+
+
+/* Removing the zoom button  */
+/* #urlbar-zoom-button { display: none !important; } */
+
+
+/* Page action (right three dash button)  */
+#pageActionButton {
+  display: none !important;
+}
+
+/*
+U R L - B A R
+*/
+
+/* #page-action-buttons { display: none !important; } */
+
+image#star-button {
+  display: none;
+}
+
+.tab-context-line {
+  bottom: 0;
+}
+
+#urlbar > #urlbar-background {
+  border-radius: 12px !important;
+}
+
+/* Always hide the tracking protection icon */
+#tracking-protection-icon-box {
+  display: none;
+}
+
+/* context menu */
+.menupopup {
+  border-radius: 12px !important;
+}
+/* general right click menu */
+#context-bookmarkpage,
+#context-savepage,
+#context-pocket,
+#context-sep-sendpagetodevice,
+#context-sep-viewbgimage,
+#context-selectall,
+#context-viewsource,
+#context-viewinfo,
+
+/* selected links */
+#context-openlinkinusercontext-menu,
+#context-bookmarklink,
+#context-savelinktopocket,
+/* #context-copylink, */
+#context-inspect,
+
+/*Removes Items from Tab Context Menu*/
+#context_reloadTab,
+#context_openTabInWindow,
+#context_sendTabToDevice_separator,
+#context_reloadAllTabs,
+#context_bookmarkAllTabs,
+#context_closeTabsToTheEnd,
+#context_closeOtherTabs,
+#context_closeTab {
+  display: none !important;
+}
