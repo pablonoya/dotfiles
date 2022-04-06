@@ -1,8 +1,0 @@
-[General]
-Radius=16
-Type=Rounded
-SquareAtScreenEdge=true
-FilterShadow=false
-Whitelist=
-Blacklist=kdialog,latte-dock,krunner
-
