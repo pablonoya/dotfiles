@@ -1,0 +1,72 @@
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+##
+## based on config from: https://github.com/1amSimp1e/dots/
+
+format="""
+$directory\
+([](bg:none fg:#303942)$git_branch$git_status[](bg:none fg:#303942) )\
+$all"""
+add_newline = true
+
+[fill]
+symbol = ''
+
+# Other languages configurations:
+haskell.disabled = true
+ruby.disabled = true
+perl.disabled = true
+
+[conda]
+format = ' [$symbol$environment](dimmed green) '
+
+# Prompt symbols
+[character]
+success_symbol = "[ ](green bold)"
+error_symbol = "[ ](red bold)"
+
+[directory]
+format = "[]($style)[ $path](bg:#303942 fg:blue bold)[]($style) "
+style = "bg:none fg:#303942"
+truncation_length = 2
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)](bg:#303942 fg:purple bold)"
+style = "bg:#303942 fg:purple bold"
+
+[git_status]
+format = "([ $all_status$ahead_behind]($style))"
+style = "bg:#303942 fg:cyan"
+# conflicted = "="
+ahead =	"${count}⇡"
+behind = "${count}⇣"
+diverged = "${ahead_count}⇡${behind_count}⇣"
+# up_to_date = ""
+untracked = "${count}?"
+stashed = ""
+modified = "${count}!"
+staged = "${count}+"
+# renamed = "»${count}"
+# deleted = "${count}"
+
+[python]
+format='via []($style)[$symbol$pyenv_prefix($version)( \($virtualenv\))](bg:#303942 fg:yellow bold)[]($style) '
+style = "bg:none fg:#303942"
+
+[nodejs]
+format='via []($style)[$symbol($version)](bg:#303942 fg:green bold)[]($style) '
+style = "bg:none fg:#303942"
+
+[lua]
+format='via []($style)[$symbol($version)](bg:#303942 fg:#f5eb94 bold)[]($style) '
+style = "bg:none fg:#303942"
+
+[cmd_duration]
+min_time = 400
+format = "[]($style)[神$duration](bg:#303942 fg:#fabdd4 bold)[ ]($style)"
+style = "bg:none fg:#303942"
+
+[sudo]
+disabled = false
+symbol = '👩‍💻 '

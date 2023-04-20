@@ -8,18 +8,10 @@
     ~/.condarc: condarc
     ~/.config/kitty: kitty
     ~/.config/neofetch: neofetch
+    ~/.config/starship.toml: starship.toml
 
     # plasma
-    ~/.local/share/aurorae/themes/Serarorae: plasma/plasma/aurorae/themes/Serarorae
     ~/.local/share/color-schemes/Seracolors.colors: plasma/color-schemes/Seracolors.colors
-    ~/.local/share/plasma/desktoptheme/Noc: plasma/plasma/desktoptheme/Noc
-
-    ~/.config/kwinrulesrc: plasma/kwinrulesrc
-    ~/.config/lattedockrc: plasma/lattedockrc
-    ~/.config/plasma-org.kde.plasma.desktop-appletsrc: plasma/plasma-org.kde.plasma.desktop-appletsrc
-    ~/.config/plasmarc: plasma/plasmarc
-    ~/.config/plasmashellrc: plasma/plasmashellrc
-    ~/.config/shapecornersrc: plasma/shapecornersrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

@@ -5,11 +5,17 @@ export MKL_NUM_THREADS=16
 export NUMEXPR_NUM_THREADS=16
 export OMP_NUM_THREADS=16
 
+# zsh autoswith virtualenv
+export AUTOSWITCH_VIRTUAL_ENV_DIR="."
+
 # 16 threads compilation
 export MAKEFLAGS="-j16"
 
 # composer
 export PATH=$HOME/.config/composer/vendor/bin:$PATH
+
+# poetry
+export PATH="/home/pablo/.local/bin:$PATH"
 
 # Completions
 autoload -Uz compinit
@@ -26,14 +32,13 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 
 # zsh autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
-ZSH_AUTOSUGGEST_USE_ASYNC=true
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/pablo/.oh-my-zsh"
 
 # Uncomment the following line to automatically update without prompting.
-DISABLE_UPDATE_PROMPT="true"
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -52,7 +57,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git sudo fzf zsh_reload
+  git sudo fzf autoswitch_virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -63,19 +68,15 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="nano ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias lsi='exa --icons'
+alias icat="kitty +kitten icat"
 
 # Ignore corrections
 alias flask='nocorrect flask'
-
-# kitty Blur
-if [[ $(ps --no-header -p $PPID -o comm) =~ '^yakuake|kitty$' ]]; then
-  for wid in $(xdotool search --pid $PPID); do
-    xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
-fi
+alias asusctl='nocorrect asusctl'
 
 # starship shell
 eval "$(starship init zsh)"

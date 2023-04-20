@@ -2,10 +2,10 @@
 C O N F I G
 */
 
-:root {
+/* :root {
   --bar-bg: #303035;
   --tab-active-bg: #404045;
-}
+} */
 
 /* TABS */
 
@@ -28,7 +28,7 @@ C O N F I G
 }
 
 .tab-background[selected="true"] {
-  background: linear-gradient(to bottom, transparent 2px, #303942 2px, #303942 100%),
+  background: linear-gradient(to bottom, transparent 2px, #604471 2px, #604471 100%),
     linear-gradient(
       to right,
       #765dff,
