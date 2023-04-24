@@ -1,46 +1,43 @@
-/*
-C O N F I G
-*/
-
-/* :root {
-  --bar-bg: #303035;
-  --tab-active-bg: #404045;
-} */
-
-/* TABS */
-
-#tabbrowser-tabs {
-  --user-tab-rounding: 16px;
+/* --- BUTTONS --- */
+#forward-button {
+  display: none !important;
 }
 
-/*@media (-moz-proton) {
-  .tab-background {
-      border-radius: var(--user-tab-rounding) !important;
-  }
-}*/
-
+/* --- TABS --- */
 /* Show Close Button on active Tab and Mouseover */
 #TabsToolbar .tabbrowser-tab[selected="true"]:not([pinned]) .close-icon {
   display: -moz-box !important;
 }
+
 #TabsToolbar .tabbrowser-tab:not([selected="true"]):not([pinned]):hover .close-icon {
   display: -moz-box !important;
 }
 
-.tab-background[selected="true"] {
-  background: linear-gradient(to bottom, transparent 2px, #604471 2px, #604471 100%),
-    linear-gradient(
-      to right,
-      #765dff,
-      #5d7dff,
-      #3e8cff,
-      #1c99ff,
-      #00a5ff,
-      #00b4ff,
-      #00c3ff,
-      #00d0ff,
-      #00ddff
-    ) !important;
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: none !important;
+}
+
+/* Gradient outline tabs */
+.tab-background[selected] {
+  outline: none !important;
+  border: 2px solid transparent !important;
+  background-color: #623b99;
+  box-shadow: none !important;
+  background-clip: padding-box;
+}
+.tab-background[selected] > .tab-context-line {
+  margin: -5px 0 0 !important;
+}
+.tabbrowser-tab[selected] > .tab-stack::before {
+  content: "";
+  grid-area: 1/1;
+  margin-block: var(--tab-block-margin);
+  /* Edit gradient colors here */
+  background: repeat linear-gradient(90deg, #61d6c6, #55b8e2) !important;
+}
+
+.tabbrowser-tab {
+  border-radius: 16px !important;
 }
 
 /* Tabs below urlbar */
@@ -48,77 +45,107 @@ C O N F I G
   -moz-box-ordinal-group: 3 !important;
 }
 
-/*
-B U T T O N S
-*/
-
-/* This one is the forward button  */
-#forward-button {
-  display: none !important;
-}
-
-/* This one is the back button  */
-/* #back-button { display: none !important; } */
-
 /* This one is the spacer between tabs and border  */
 .titlebar-spacer {
   display: none !important;
 }
 
-/* This one is the "shield" icon  */
-/* #tracking-protection-icon-container { display: none !important; } */
-
-/* This one is the hamburger menu!  */
-/* #PanelUI-button { display: none !important; } */
-
-/* This one removes the close button  */
-.tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: none !important;
-}
-*/
-
-
-/* Removing the zoom button  */
-/* #urlbar-zoom-button { display: none !important; } */
-
-
-/* Page action (right three dash button)  */
-#pageActionButton {
-  display: none !important;
+/* --- URL Bar --- */
+/* Search Bar */
+#urlbar-input-container,
+#searchbar,
+#urlbar-container #urlbar-background {
+  border-radius: 16px !important;
 }
 
-/*
-U R L - B A R
-*/
-
-/* #page-action-buttons { display: none !important; } */
-
-image#star-button {
-  display: none;
+#urlbar .urlbar-input-box {
+  text-align: center;
+  vertical-align: middle;
 }
 
-.tab-context-line {
-  bottom: 0;
+#urlbar-container #urlbar {
+  --urlbar-height: 30px !important;
+  --urlbar-min-height: 32px !important;
+  transition-duration: 50ms;
 }
 
-#urlbar > #urlbar-background {
-  border-radius: 12px !important;
+/* --- Auto hide  Buttons inside URL bar --- */
+#nav-bar:not([customizing="true"]):not(.searchButton)
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > :is(#page-action-buttons) {
+  opacity: 0;
+  transition-delay: 400ms;
 }
 
-/* Always hide the tracking protection icon */
+#nav-bar:not([customizing="true"]):not(.searchButton)
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > #identity-box
+  #identity-icon-box:not([open]),
+#notification-popup-box:not([open]) .notification-anchor-icon {
+  opacity: 0;
+  transition-delay: 400ms;
+}
+
+#nav-bar:not([customizing="true"]):not(.searchButton)
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > #identity-box
+  #identity-permission-box:not([open]) {
+  opacity: 0;
+  transition-delay: 400ms;
+}
+
+#page-action-buttons,
+#identity-permission-box,
+#notification-popup-box .notification-anchor-icon {
+  transition: opacity 0.2s ease;
+}
+
+#page-action-buttons #star-button-box,
 #tracking-protection-icon-box {
-  display: none;
+  visibility: hidden !important;
+  transition: 300ms !important;
+  opacity: 0 !important;
+  -moz-margin-end: -1.4em !important;
 }
 
-/* context menu */
-.menupopup {
-  border-radius: 12px !important;
+#tracking-protection-icon-container:hover #tracking-protection-icon-box,
+#page-action-buttons:hover #star-button-box {
+  visibility: visible !important;
+  transition: 300ms !important;
+  opacity: 1 !important;
+  -moz-margin-end: initial !important;
 }
+
+#urlbar-input-container #identity-box > .identity-box-button,
+#tracking-protection-icon-container,
+#urlbar-go-button,
+#page-action-buttons .urlbar-page-action,
+#notification-popup-box {
+  border-radius: 16px !important;
+  -moz-window-shadow: none !important;
+}
+
+/* --- Context menu --- */
+menupopup {
+  border-radius: 16px;
+  -moz-appearance: none !important;
+  overflow: -moz-hidden-unscrollable !important;
+  -moz-window-shadow: none !important;
+}
+
 /* general right click menu */
 #context-bookmarkpage,
 #context-savepage,
 #context-pocket,
-#context-sep-sendpagetodevice,
 #context-sep-viewbgimage,
 #context-selectall,
 #context-viewsource,
@@ -128,7 +155,6 @@ image#star-button {
 #context-openlinkinusercontext-menu,
 #context-bookmarklink,
 #context-savelinktopocket,
-/* #context-copylink, */
 #context-inspect,
 
 /*Removes Items from Tab Context Menu*/
