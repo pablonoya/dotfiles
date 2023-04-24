@@ -1,27 +1,26 @@
 # Dotfiles
 
-Just my personal dotfiles.
+My personal dotfiles for an Awesome desktop experience.
 
-## Installation
+![screenshot](https://user-images.githubusercontent.com/31524852/232510330-a812c5d7-f5e5-4aa3-a7d5-deb58a684390.png)
+![image](https://user-images.githubusercontent.com/31524852/233890241-56ae3675-8b7b-4571-96c4-595ffde5245b.png)
 
+### ℹ️ Details
+---
+
+- 🐧 **OS:** EndeavourOS
+- 🪟 **WM:** AwesomeWM, configuration [here](https://github.com/pablonoya/awesomewm-configuration)
+- 🧑‍💻 **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/) with customized [starship prompt](https://starship.rs/)
+- 🌙 **Icons:** [Küyen](https://github.com/fabianalexisinostroza/Kuyen-icons)
+- ▶ **Wallpaper:** "#8 Unicorn" by [Kanistra Studio](https://www.artstation.com/artwork/Bmd6zm)
+- 🎨 **Color scheme:** [seramuriana](https://github.com/pablonoya/seramuriana) (colors also for plasma / qt5 and kitty)
+- 🔡 **Fonts**
+  - Regular: [Manrope](https://www.gent.media/manrope)
+  - Monospace: [JetBrains Mono Slashed](https://github.com/sharpjs/JetBrainsMonoSlashed#installation)
+  - Icons: [Material Design Icons](https://github.com/google/material-design-icons) and [jetbrains-mono-nerd](https://archlinux.org/packages/community/any/ttf-jetbrains-mono-nerd/)
+
+### ⚙ Installation
+---
 You can use [dotbot](https://github.com/anishathalye/dotbot) to symlink the files. Clone this repo and run `./install`.
 
-### Plasma files
-
-Import `plasma/plasma.tar.gz` using [Plasma Customization Saver](https://store.kde.org/p/1298955/)
-
-## Theme
-
-![screenshot](plasma/screenshot.png)
-![screenshot](plasma/screenshot_busy.png)
-
-- Panel: [Latte](https://github.com/KDE/latte-dock)
-- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
-- Wallpaper: [Cityscape Cyberpunk live wallpaper](https://mylivewallpapers.com/sci-fi/cityscape-cyberpunk-live-wallpaper/)
-- Icons: [Küyen](https://github.com/fabianalexisinostroza/Kuyen-icons)
-- Plasma Theme: Noc from [Noc and Lux](https://store.kde.org/p/1187841/)
-- VS code theme: [seramuriana](https://github.com/pablonoya/seramuriana) (colors also in plasma and kitty)
-- Rounded corners: [ShapeCorners](https://github.com/khanhas/ShapeCorners)
-- Tiling: [Kröhnkite](https://github.com/esjeon/krohnkite)
-
-Latte layout and firefox css must be copied from `plasma/latte/` and `firefox/` directories
+⚠ Firefox css must be copied from `firefox/` directory to your profile directory.
