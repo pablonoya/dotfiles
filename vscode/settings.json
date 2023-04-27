@@ -1,0 +1,182 @@
+{
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+
+  "codesnap.showWindowControls": false,
+  "codesnap.showWindowTitle": true,
+  "codesnap.target": "window",
+  "codesnap.transparentBackground": true,
+
+  "codestream.email": "pablonoya18@gmail.com",
+  "codestream.serverUrl": "https://api.codestream.com",
+  "debug.onTaskErrors": "debugAnyway",
+  "diffEditor.maxComputationTime": 0,
+
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.detectIndentation": true,
+  "editor.fontFamily": "'JetBrains Mono Slashed', 'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Manrope Medium', Manrope, Inter, 'Noto Sans'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.lineHeight": 1.5,
+  "editor.linkedEditing": true,
+  "editor.minimap.autohide": true,
+  "editor.minimap.maxColumn": 101,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.scale": 2,
+  "editor.overviewRulerBorder": false,
+  "editor.renderWhitespace": "selection",
+  "editor.rulers": [101],
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.preview": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 101,
+
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "explorer.confirmDragAndDrop": false,
+
+  "files.associations": {
+    "**/*.html": "html",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "**/templates/**/*": "django-txt",
+    "**/templates/**/*.html": "django-html"
+  },
+  "files.autoSave": "off",
+  "files.autoSaveDelay": 8000,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.ignoreRebaseWarning": true,
+  "gitlens.rebaseEditor.ordering": "asc",
+  "highlight-matching-tag.highlightFromContent": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "luahelper.format.align_args": true,
+  "luahelper.format.break_after_functioncall_lp": true,
+  "luahelper.format.break_after_functiondef_lp": true,
+  "luahelper.format.break_after_table_lb": true,
+  "luahelper.format.break_before_functioncall_rp": true,
+  "luahelper.format.break_before_functiondef_rp": true,
+  "luahelper.format.break_before_table_rb": true,
+  "luahelper.format.chop_down_parameter": true,
+  "luahelper.format.column_limit": 100,
+
+  "markdown.preview.fontFamily": "Manrope, 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+  "material-icon-theme.files.associations": {
+    "*.ctp": "cake",
+    "*.php": "Php_elephant",
+    "fileName.ctp": "cake"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+
+  "phpfmt.exclude": ["AllmanStyleBraces"],
+  "phpfmt.psr2": false,
+
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 101,
+  "prettier.semi": false,
+  "prettier.vueIndentScriptAndStyle": true,
+
+  "python.formatting.blackPath": "/usr/bin/black",
+  "python.formatting.provider": "black",
+  "python.linting.pylintEnabled": true,
+
+  "scm.inputFontFamily": "",
+  "scm.inputFontSize": 14,
+  "security.workspace.trust.untrustedFiles": "open",
+  "tabnine.experimentalAutoImports": true,
+
+  "terminal.external.linuxExec": "kitty",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.lineHeight": 1.3,
+
+  "typescript.format.semicolons": "remove",
+  "vscode-pets.petSize": "medium",
+  "vscode-pets.throwBallWithMouse": true,
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "vsintellicode.python.completionsEnabled": true,
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${profileName}${separator}${appName}",
+  "window.titleBarStyle": "custom",
+
+  "workbench.colorTheme": "seramuriana",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.sideBar.location": "right",
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt",
+    "editor.tabSize": 4
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true,
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.tabs.hideCondition": "singleGroup",
+  "terminal.integrated.detectLocale": "off",
+  "terminal.integrated.shellIntegration.history": 700,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler"
+}

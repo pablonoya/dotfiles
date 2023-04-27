@@ -10,6 +10,9 @@
     ~/.config/neofetch: neofetch
     ~/.config/starship.toml: starship.toml
 
+    ~/.config/Code/User/settings.json: vscode/settings.json
+    ~/.config/Code/User/keybindings.json: vscode/keybindings.json
+
     # plasma
     ~/.local/share/color-schemes/Seracolors.colors: plasma/color-schemes/Seracolors.colors
 
