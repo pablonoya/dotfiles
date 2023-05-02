@@ -3,6 +3,7 @@
       relink: true
 
 - link:
+    ~/.Xresources: Xresources
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
     ~/.condarc: condarc

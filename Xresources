@@ -1,0 +1,46 @@
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.autohint:	1
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+Xcursor.theme: capitaine-cursors-light
+Xcursor.size: 32
+
+! special
+*.foreground:   #f2f0fd
+*.background:   #303942
+*.cursorColor:  #f5eb94
+
+! black
+*.color0:       #232a31
+*.color8:       #c4c3cd
+
+! red mars & pink chibi
+*.color1:       #f56684
+*.color9:       #fabdd4
+
+! green jupiter
+*.color2:       #7cd5a1
+*.color10:      #7cd5a1
+
+! yellow venus & moon
+*.color3:       #f7df6e
+*.color11:      #f5eb94
+
+! blue mercury
+*.color4:       #55b8e2
+*.color12:      #55b8e2
+
+! magenta saturn & garnet pluto
+*.color5:       #d7b8ea
+*.color13:      #efa3ce
+
+! cyan neptune
+*.color6:       #61d6c6
+*.color14:      #61d6c6
+
+! white
+*.color7:       #f2f0fd
+*.color15:      #f4f2ff
