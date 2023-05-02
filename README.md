@@ -13,7 +13,7 @@ My personal dotfiles for an Awesome desktop experience.
 - 🧑‍💻 **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/) with customized [starship prompt](https://starship.rs/)
 - 🌙 **Icons:** [Küyen](https://github.com/fabianalexisinostroza/Kuyen-icons)
 - ▶ **Wallpaper:** "#8 Unicorn" by [Kanistra Studio](https://www.artstation.com/artwork/Bmd6zm)
-- 🎨 **Color scheme:** [seramuriana](https://github.com/pablonoya/seramuriana) (colors also for plasma / qt5 and kitty)
+- 🎨 **Color scheme:** SērāMūriana, my custom palette, available for Xresources, [VS Code](https://github.com/pablonoya/seramuriana), plasma / qt5 and kitty
 - 🔡 **Fonts**
   - Regular: [Manrope](https://www.gent.media/manrope)
   - Monospace: [JetBrains Mono Slashed](https://github.com/sharpjs/JetBrainsMonoSlashed#installation)
