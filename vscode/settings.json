@@ -6,8 +6,6 @@
   "codesnap.target": "window",
   "codesnap.transparentBackground": true,
 
-  "codestream.email": "pablonoya18@gmail.com",
-  "codestream.serverUrl": "https://api.codestream.com",
   "debug.onTaskErrors": "debugAnyway",
   "diffEditor.maxComputationTime": 0,
 
@@ -41,6 +39,7 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 101,
+  "editor.glyphMargin": true,
 
   "emmet.includeLanguages": {
     "django-html": "html"
@@ -178,5 +177,19 @@
   "terminal.integrated.tabs.hideCondition": "singleGroup",
   "terminal.integrated.detectLocale": "off",
   "terminal.integrated.shellIntegration.history": 700,
-  "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler"
+  "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDelete": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": true
+  }
 }
