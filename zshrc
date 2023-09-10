@@ -71,7 +71,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nano ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias lsi='exa --icons'
+alias ls='exa --icons'
 alias icat="kitty +kitten icat"
 
 # Ignore corrections
