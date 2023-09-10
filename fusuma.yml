@@ -1,0 +1,41 @@
+swipe:
+  4:
+    begin:
+      command: xdotool keydown Super
+    right:
+      update:
+        command: xdotool key semicolon
+        interval: 4
+    left:
+      update:
+        command: xdotool key apostrophe
+        interval: 4
+    end:
+      command: xdotool keyup Super
+
+  3:
+    begin:
+      command: xdotool keydown Alt
+    right:
+      update:
+        command: xdotool key Tab
+        interval: 5
+    left:
+      update:
+        command: xdotool key Shift+Tab
+        interval: 5
+    end:
+      command: xdotool keyup Alt
+pinch:
+  2:
+    in:
+      command: "xdotool keydown ctrl click 4 keyup ctrl"
+    out:
+      command: "xdotool keydown ctrl click 5 keyup ctrl"
+
+threshold:
+  pinch: 0.4
+
+interval:
+  swipe: 0.5
+  pinch: 0.4

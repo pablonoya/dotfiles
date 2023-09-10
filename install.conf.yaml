@@ -7,6 +7,7 @@
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
     ~/.condarc: condarc
+    ~/.config/fusuma/config.yml: fusuma.yml
     ~/.config/kitty: kitty
     ~/.config/neofetch: neofetch
     ~/.config/starship.toml: starship.toml
