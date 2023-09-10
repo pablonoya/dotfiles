@@ -1,20 +1,22 @@
-/* --- BUTTONS --- */
-#forward-button {
-  display: none !important;
-}
-
 /* --- TABS --- */
 /* Show Close Button on active Tab and Mouseover */
 #TabsToolbar .tabbrowser-tab[selected="true"]:not([pinned]) .close-icon {
-  display: -moz-box !important;
+  display: block !important;
+  border-radius: 50%;
 }
 
 #TabsToolbar .tabbrowser-tab:not([selected="true"]):not([pinned]):hover .close-icon {
-  display: -moz-box !important;
+  display: block !important;
+  border-radius: 50%;
 }
 
 .tabbrowser-tab:not([pinned]) .tab-close-button {
   display: none !important;
+  border-radius: 50%;
+}
+
+.tab-close-button.close-icon {
+  border-radius: 50%;
 }
 
 /* Gradient outline tabs */
@@ -42,7 +44,7 @@
 
 /* Tabs below urlbar */
 #titlebar {
-  -moz-box-ordinal-group: 3 !important;
+  order: 3 !important;
 }
 
 /* This one is the spacer between tabs and border  */
@@ -70,59 +72,27 @@
 }
 
 /* --- Auto hide  Buttons inside URL bar --- */
-#nav-bar:not([customizing="true"]):not(.searchButton)
-  > #nav-bar-customization-target
-  > #urlbar-container:not(:hover)
-  > #urlbar:not([focused])
-  > #urlbar-input-container
-  > :is(#page-action-buttons) {
-  opacity: 0;
-  transition-delay: 400ms;
-}
+/* based on: https://github.com/datguypiko/Firefox-Mod-Blur/ */
 
 #nav-bar:not([customizing="true"]):not(.searchButton)
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
   > #urlbar:not([focused])
-  > #urlbar-input-container
-  > #identity-box
-  #identity-icon-box:not([open]),
-#notification-popup-box:not([open]) .notification-anchor-icon {
-  opacity: 0;
-  transition-delay: 400ms;
-}
-
-#nav-bar:not([customizing="true"]):not(.searchButton)
-  > #nav-bar-customization-target
-  > #urlbar-container:not(:hover)
-  > #urlbar:not([focused])
-  > #urlbar-input-container
-  > #identity-box
+  > #urlbar-input-container {
+  #page-action-buttons .urlbar-page-action,
+  #tracking-protection-icon-container,
+  #identity-box > #identity-icon-box:not([open]),
   #identity-permission-box:not([open]) {
-  opacity: 0;
-  transition-delay: 400ms;
+    opacity: 0;
+    margin-inline-start: calc(-16px - var(--urlbar-icon-padding));
+  }
 }
 
-#page-action-buttons,
-#identity-permission-box,
+#page-action-buttons .urlbar-page-action,
+#tracking-protection-icon-container,
+#identity-icon-box,
 #notification-popup-box .notification-anchor-icon {
-  transition: opacity 0.2s ease;
-}
-
-#page-action-buttons #star-button-box,
-#tracking-protection-icon-box {
-  visibility: hidden !important;
-  transition: 300ms !important;
-  opacity: 0 !important;
-  -moz-margin-end: -1.4em !important;
-}
-
-#tracking-protection-icon-container:hover #tracking-protection-icon-box,
-#page-action-buttons:hover #star-button-box {
-  visibility: visible !important;
-  transition: 300ms !important;
-  opacity: 1 !important;
-  -moz-margin-end: initial !important;
+  transition: 0.2s ease;
 }
 
 #urlbar-input-container #identity-box > .identity-box-button,
@@ -130,16 +100,17 @@
 #urlbar-go-button,
 #page-action-buttons .urlbar-page-action,
 #notification-popup-box {
-  border-radius: 16px !important;
-  -moz-window-shadow: none !important;
+  border-radius: 50% !important;
+}
+
+#urlbar-zoom-button {
+  background-color: var(--firefoxcss-item-bg-color) !important;
 }
 
 /* --- Context menu --- */
 menupopup {
   border-radius: 16px;
-  -moz-appearance: none !important;
   overflow: -moz-hidden-unscrollable !important;
-  -moz-window-shadow: none !important;
 }
 
 /* general right click menu */
