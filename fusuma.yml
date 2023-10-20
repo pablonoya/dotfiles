@@ -1,37 +1,38 @@
 swipe:
   4:
-    begin:
-      command: xdotool keydown Super
     right:
       update:
-        command: xdotool key semicolon
-        interval: 4
+        sendkey: LEFTMETA+SEMICOLON
+        interval: 3
     left:
       update:
-        command: xdotool key apostrophe
-        interval: 4
-    end:
-      command: xdotool keyup Super
+        sendkey: LEFTMETA+APOSTROPHE
+        interval: 3
 
   3:
     begin:
       command: xdotool keydown Alt
     right:
       update:
-        command: xdotool key Tab
-        interval: 5
+        sendkey: TAB
+        interval: 3
     left:
       update:
-        command: xdotool key Shift+Tab
-        interval: 5
+        sendkey: LEFTSHIFT+TAB
+        interval: 3
     end:
       command: xdotool keyup Alt
+
 pinch:
   2:
     in:
       command: "xdotool keydown ctrl click 4 keyup ctrl"
     out:
       command: "xdotool keydown ctrl click 5 keyup ctrl"
+
+hold:
+  3:
+    sendkey: LEFTMETA+TAB
 
 threshold:
   pinch: 0.4

@@ -100,7 +100,7 @@
 #urlbar-go-button,
 #page-action-buttons .urlbar-page-action,
 #notification-popup-box {
-  border-radius: 50% !important;
+  border-radius: 16px !important;
 }
 
 #urlbar-zoom-button {
