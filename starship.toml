@@ -19,7 +19,8 @@ ruby.disabled = true
 perl.disabled = true
 
 [conda]
-format = ' [$symbol$environment](dimmed green) '
+format = '[]($style)[$symbol$environment](bg:#303942 fg:green)[]($style)'
+style = "bg:none fg:#303942"
 
 # Prompt symbols
 [character]
