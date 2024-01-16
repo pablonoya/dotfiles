@@ -1,14 +1,11 @@
 {
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
-
   "codesnap.showWindowControls": false,
   "codesnap.showWindowTitle": true,
   "codesnap.target": "window",
   "codesnap.transparentBackground": true,
-
   "debug.onTaskErrors": "debugAnyway",
   "diffEditor.maxComputationTime": 0,
-
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.bracketPairColorization.enabled": true,
@@ -31,7 +28,9 @@
   "editor.minimap.scale": 2,
   "editor.overviewRulerBorder": false,
   "editor.renderWhitespace": "selection",
-  "editor.rulers": [101],
+  "editor.rulers": [
+    101
+  ],
   "editor.stickyScroll.enabled": true,
   "editor.suggest.preview": true,
   "editor.suggestSelection": "recentlyUsedByPrefix",
@@ -40,12 +39,10 @@
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 101,
   "editor.glyphMargin": true,
-
   "emmet.includeLanguages": {
     "django-html": "html"
   },
   "explorer.confirmDragAndDrop": false,
-
   "files.associations": {
     "**/*.html": "html",
     "**/requirements{/**,*}.{txt,in}": "pip-requirements",
@@ -63,14 +60,12 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-
-  "git.autofetch": true,
+  "git.autofetch": "all",
   "git.confirmSync": false,
   "git.ignoreRebaseWarning": true,
   "gitlens.rebaseEditor.ordering": "asc",
   "highlight-matching-tag.highlightFromContent": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-
   "luahelper.format.align_args": true,
   "luahelper.format.break_after_functioncall_lp": true,
   "luahelper.format.break_after_functiondef_lp": true,
@@ -80,7 +75,6 @@
   "luahelper.format.break_before_table_rb": true,
   "luahelper.format.chop_down_parameter": true,
   "luahelper.format.column_limit": 100,
-
   "markdown.preview.fontFamily": "Manrope, 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
   "material-icon-theme.files.associations": {
     "*.ctp": "cake",
@@ -91,24 +85,16 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-
-  "phpfmt.exclude": ["AllmanStyleBraces"],
+  "phpfmt.exclude": [
+    "AllmanStyleBraces"
+  ],
   "phpfmt.psr2": false,
-
   "prettier.arrowParens": "avoid",
   "prettier.printWidth": 101,
   "prettier.semi": false,
   "prettier.vueIndentScriptAndStyle": true,
-
-  "python.formatting.blackPath": "/usr/bin/black",
-  "python.formatting.provider": "black",
-  "python.linting.pylintEnabled": true,
-
-  "scm.inputFontFamily": "",
   "scm.inputFontSize": 14,
   "security.workspace.trust.untrustedFiles": "open",
-  "tabnine.experimentalAutoImports": true,
-
   "terminal.external.linuxExec": "kitty",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
@@ -116,25 +102,22 @@
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.lineHeight": 1.3,
-
+  "terminal.integrated.tabs.hideCondition": "singleGroup",
+  "terminal.integrated.detectLocale": "off",
+  "terminal.integrated.shellIntegration.history": 700,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
   "typescript.format.semicolons": "remove",
   "vscode-pets.petSize": "medium",
   "vscode-pets.throwBallWithMouse": true,
-  "vsintellicode.features.python.deepLearning": "enabled",
-  "vsintellicode.python.completionsEnabled": true,
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${profileName}${separator}${appName}",
   "window.titleBarStyle": "custom",
-
   "workbench.colorTheme": "seramuriana",
-  "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.layoutControl.enabled": false,
   "workbench.productIconTheme": "material-product-icons",
   "workbench.sideBar.location": "right",
-
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -145,7 +128,7 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -157,27 +140,31 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[php]": {
     "editor.defaultFormatter": "kokororin.vscode-phpfmt",
     "editor.tabSize": 4
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnType": true,
-    "editor.tabSize": 4
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
   },
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "terminal.integrated.tabs.hideCondition": "singleGroup",
-  "terminal.integrated.detectLocale": "off",
-  "terminal.integrated.shellIntegration.history": 700,
-  "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -191,5 +178,15 @@
     "plaintext": false,
     "markdown": true,
     "scminput": true
-  }
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "python.autoComplete.extraPaths": [],
+  "python.analysis.logLevel": "Error",
+  "black-formatter.importStrategy": "useBundled",
+  "python.analysis.extraPaths": [],
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "python.analysis.autoFormatStrings": true,
+  "ruff.organizeImports": false,
 }

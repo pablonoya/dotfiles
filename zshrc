@@ -11,8 +11,8 @@ export AUTOSWITCH_VIRTUAL_ENV_DIR="."
 # 16 threads compilation
 export MAKEFLAGS="-j16"
 
-# composer
-export PATH=$HOME/.config/composer/vendor/bin:$PATH
+# direnv
+eval "$(direnv hook zsh)"
 
 # poetry
 export PATH="/home/pablo/.local/bin:$PATH"
