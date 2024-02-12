@@ -15,7 +15,7 @@ Xcursor.size: 32
 
 ! black
 *.color0:       #232a31
-*.color8:       #c4c3cd
+*.color8:       #c2c0cd
 
 ! red mars & pink chibi
 *.color1:       #f56684
