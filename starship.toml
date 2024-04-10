@@ -24,11 +24,11 @@ style = "bg:none fg:#303942"
 
 # Prompt symbols
 [character]
-success_symbol = "[ ](green bold)"
-error_symbol = "[ ](red bold)"
+success_symbol = "[](green bold)"
+error_symbol = "[](red bold)"
 
 [directory]
-format = "[]($style)[ $path](bg:#303942 fg:blue bold)[]($style) "
+format = "[ $path](bg:#303942 fg:blue bold)[]($style) "
 style = "bg:none fg:#303942"
 truncation_length = 2
 
@@ -37,19 +37,16 @@ format = "[$symbol$branch(:$remote_branch)](bg:#303942 fg:purple bold)"
 style = "bg:#303942 fg:purple bold"
 
 [git_status]
-format = "([ | $all_status$ahead_behind]($style))"
+format = "([ $all_status$ahead_behind]($style))"
 style = "bg:#303942 fg:cyan"
 # conflicted = "="
 ahead =	"${count}⇡"
 behind = "${count}⇣"
 diverged = "${ahead_count}⇡${behind_count}⇣"
-# up_to_date = ""
 untracked = "${count}?"
-stashed = ""
+stashed = " "
 modified = "${count}!"
 staged = "${count}+"
-# renamed = "»${count}"
-# deleted = "${count}"
 
 [python]
 format='via []($style)[$symbol$pyenv_prefix($version)( \($virtualenv\))](bg:#303942 fg:yellow bold)[]($style) '
@@ -65,7 +62,7 @@ style = "bg:none fg:#303942"
 
 [cmd_duration]
 min_time = 400
-format = "[]($style)[⌛ $duration](bg:#303942 fg:#fabdd4 bold)[ ]($style)"
+format = "[]($style)[⌛$duration](bg:#303942 fg:#fabdd4 bold)[ ]($style)"
 style = "bg:none fg:#303942"
 
 [sudo]
