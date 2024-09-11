@@ -2,6 +2,13 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 return {
+    window_padding = {
+        top = '0.1cell',
+        bottom = 0,
+        left = '0.7cell',
+        right = '0.7cell'
+    },
+
     window_frame = {
         font = wezterm.font {
             family = "Manrope",
@@ -17,6 +24,7 @@ return {
             harfbuzz_features = {"zero=1"}
         }, "Noto Color Emoji", "Manrope"
     },
+
     enable_scroll_bar = true,
     hide_tab_bar_if_only_one_tab = true,
     default_cursor_style = "BlinkingBar",
