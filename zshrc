@@ -17,69 +17,68 @@ eval "$(direnv hook zsh)"
 # poetry
 export PATH="/home/pablo/.local/bin:$PATH"
 
-# Completions
-autoload -Uz compinit
-compinit
+# Set the directory we want to store zinit and plugins
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
+# Download Zinit, if it's not there yet
+if [ ! -d "$ZINIT_HOME" ]; then
+   mkdir -p "$(dirname $ZINIT_HOME)"
+   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
+# Source/Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Add in zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit wait lucid for zsh-users/zsh-completions
+# zinit wait lucid for Aloxaf/fzf-tab
+zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
+
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
+
+# Add in snippets
+zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZP::git
+zinit snippet OMZP::fzf
+zinit snippet OMZP::sudo
+
+# Completions
+autoload -Uz compinit && compinit
+zinit cdreplay -q
+
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*' rehash true
 
-# zsh syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
-# ZSH_HIGHLIGHT_DIRS_BLACKLIST=(/*(/))
-
-# zsh autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
-
-# Path to your oh-my-zsh installation.
-export ZSH="/home/pablo/.oh-my-zsh"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git sudo fzf autoswitch_virtualenv
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="nano ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
+# Aliases
 alias ls='exa --icons'
-alias icat="kitty +kitten icat"
+alias icat="wezterm imgcat"
 
 # Ignore corrections
 alias flask='nocorrect flask'
-alias asusctl='nocorrect asusctl'
 
-# starship shell
-eval "$(starship init zsh)"
+# Load starship theme
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
 
 # custom scripts
 autoload -Uz $HOME/.dotfiles/zscripts/*
