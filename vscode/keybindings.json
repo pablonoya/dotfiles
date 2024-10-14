@@ -25,31 +25,16 @@
   {
     "key": "ctrl+shift+g",
     "command": "workbench.view.scm",
-    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
-    "key": "ctrl+shift+g g",
-    "command": "-workbench.view.scm",
-    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
-    "key": "ctrl+shift+g g",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active"
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+shift+g",
-    "command": "-workbench.view.scm",
-    "when": "workbench.scm.active"
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.visible"
   },
   {
-    "key": "ctrl+shift+g \\",
-    "command": "gitlens.gitCommands",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
-    "key": "ctrl+shift+g /",
-    "command": "-gitlens.gitCommands",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    "key": "ctrl+shift+g",
+    "command": "-workbench.action.terminal.openDetectedLink",
+    "when": "accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal'"
   }
 ]
