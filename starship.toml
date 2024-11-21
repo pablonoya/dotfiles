@@ -64,7 +64,3 @@ style = "bg:none fg:#303942"
 min_time = 400
 format = "[]($style)[⌛$duration](bg:#303942 fg:#fabdd4 bold)[ ]($style)"
 style = "bg:none fg:#303942"
-
-[sudo]
-disabled = false
-symbol = '👩‍💻 '

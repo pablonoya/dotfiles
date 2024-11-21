@@ -1,11 +1,10 @@
 Xft.antialias: 1
 Xft.dpi: 96
-Xft.hinting: 1
-Xft.autohint:	1
-Xft.hintstyle: hintslight
+Xft.hinting: 0
+Xft.autohint:	0
+Xft.hintstyle: hintnone
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
-Xcursor.theme: capitaine-cursors-light
 Xcursor.size: 32
 
 ! special

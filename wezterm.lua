@@ -3,7 +3,7 @@ local act = wezterm.action
 
 return {
     window_padding = {
-        top = '0.1cell',
+        top = '0.2cell',
         bottom = 0,
         left = '0.7cell',
         right = '0.7cell'
