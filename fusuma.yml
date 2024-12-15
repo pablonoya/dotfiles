@@ -8,6 +8,9 @@ swipe:
       update:
         sendkey: LEFTMETA+APOSTROPHE
         interval: 3
+    up:
+      end:
+        sendkey: LEFTMETA+TAB
 
   3:
     begin:
@@ -29,10 +32,6 @@ pinch:
       command: "xdotool keydown ctrl click 4 keyup ctrl"
     out:
       command: "xdotool keydown ctrl click 5 keyup ctrl"
-
-hold:
-  3:
-    sendkey: LEFTMETA+TAB
 
 threshold:
   pinch: 0.4

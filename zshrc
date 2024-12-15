@@ -14,7 +14,7 @@ export MAKEFLAGS="-j16"
 # direnv
 eval "$(direnv hook zsh)"
 
-# poetry
+# include local scripts
 export PATH="/home/pablo/.local/bin:$PATH"
 
 # Set the directory we want to store zinit and plugins
@@ -33,12 +33,12 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit wait lucid for zsh-users/zsh-completions
-# zinit wait lucid for Aloxaf/fzf-tab
 zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
 
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 
 # Add in snippets
+zinit snippet OMZL::directories.zsh
 zinit snippet OMZL::key-bindings.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::fzf
@@ -71,14 +71,14 @@ zstyle ':completion:*' rehash true
 alias ls='exa --icons'
 alias icat="wezterm imgcat"
 
-# Ignore corrections
-alias flask='nocorrect flask'
-
 # Load starship theme
 zinit ice as"command" from"gh-r" \
-          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-          atpull"%atclone" src"init.zsh"
+   atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+   atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
 # custom scripts
 autoload -Uz $HOME/.dotfiles/zscripts/*
+
+# direnv
+eval "$(direnv hook zsh)"
