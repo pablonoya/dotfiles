@@ -43,6 +43,7 @@ zinit snippet OMZL::key-bindings.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::fzf
 zinit snippet OMZP::sudo
+zinit snippet OMZP::docker-compose
 
 # Completions
 autoload -Uz compinit && compinit
@@ -68,8 +69,8 @@ zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*' rehash true
 
 # Aliases
-alias ls='exa --icons'
-alias icat="wezterm imgcat"
+alias ls="exa --icons "
+alias icat="wezterm imgcat "
 
 # Load starship theme
 zinit ice as"command" from"gh-r" \
