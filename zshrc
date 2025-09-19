@@ -1,4 +1,5 @@
 export EDITOR="nano"
+export PYTHONPATH=""
 
 # python multithread
 export MKL_NUM_THREADS=16
@@ -7,12 +8,6 @@ export OMP_NUM_THREADS=16
 
 # zsh autoswith virtualenv
 export AUTOSWITCH_VIRTUAL_ENV_DIR="."
-
-# 16 threads compilation
-export MAKEFLAGS="-j16"
-
-# direnv
-eval "$(direnv hook zsh)"
 
 # include local scripts
 export PATH="/home/pablo/.local/bin:$PATH"
@@ -83,3 +78,4 @@ autoload -Uz $HOME/.dotfiles/zscripts/*
 
 # direnv
 eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh)"
