@@ -13,6 +13,7 @@
     ~/.config/fastfetch: fastfetch
     ~/.config/Code/User/settings.json: vscode/settings.json
     ~/.config/Code/User/keybindings.json: vscode/keybindings.json
+    ~/.config/ulauncher/user-themes/ulauncher-seramuriana: ulauncher-seramuriana
 
     # Old settings
     # ~/.config/kitty: kitty
