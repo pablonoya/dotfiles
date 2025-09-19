@@ -9,7 +9,7 @@ Xcursor.size: 32
 
 ! special
 *.foreground:   #f2f0fd
-*.background:   #303942
+*.background:   #303943
 *.cursorColor:  #f5eb94
 
 ! black

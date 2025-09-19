@@ -4,7 +4,7 @@ local act = wezterm.action
 return {
     window_padding = {
         top = '0.2cell',
-        bottom = 0,
+        bottom = 1,
         left = '0.7cell',
         right = '0.7cell'
     },
@@ -24,6 +24,7 @@ return {
             harfbuzz_features = {"zero=1"}
         }, "Noto Color Emoji", "Manrope"
     },
+    font_size = 11,
 
     enable_scroll_bar = true,
     hide_tab_bar_if_only_one_tab = true,
