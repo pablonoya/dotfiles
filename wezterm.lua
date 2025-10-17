@@ -42,8 +42,8 @@ return {
         selection_bg = "#f5eb94",
         selection_fg = "#232a31",
 
-        scrollbar_thumb = "#394550",
-        split = "#394550",
+        scrollbar_thumb = "#2598c2",
+        split = "#d7b8ea",
 
         ansi = {
             "#232a31", "#fabdd4", "#7cd5a1", "#f5eb94", "#55b8e2", "#efa3ce", "#61d6c6", "#f4f2ff"

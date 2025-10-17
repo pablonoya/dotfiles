@@ -7,7 +7,7 @@
 format = """
 $directory\
 ([](bg:none fg:#303942)$git_branch$git_status[](bg:none fg:#303942) )\
-$all"""
+ $all"""
 add_newline = true
 
 # Other languages configurations:
@@ -21,15 +21,16 @@ style = "bg:none fg:#303942"
 
 # Prompt symbols
 [character]
-success_symbol = "[](green bold)"
-error_symbol = "[](red bold)"
+success_symbol = "[ ](green bold)"
+error_symbol = "[ ](red bold)"
 
 [directory]
 format = "[]($style)[ $path](bg:#303942 fg:blue bold)[]($style) "
 style = "bg:none fg:#303942"
-truncation_length = 2
+truncation_length = 3
 
 [git_branch]
+symbol = " "
 format = "[$symbol$branch(:$remote_branch)](bg:#303942 fg:purple bold)"
 style = "bg:#303942 fg:purple bold"
 
