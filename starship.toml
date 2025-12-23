@@ -9,6 +9,8 @@ $directory\
 ([](bg:none fg:#303942)$git_branch$git_status[](bg:none fg:#303942) )\
  $all"""
 add_newline = true
+scan_timeout = 60
+command_timeout = 1000
 
 # Other languages configurations:
 haskell.disabled = true

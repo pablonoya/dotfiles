@@ -2,6 +2,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 return {
+    enable_wayland = true,
     window_padding = {
         top = '0.2cell',
         bottom = 1,
@@ -120,6 +121,28 @@ return {
                     mods = "CTRL"
                 }
             }
+        }
+    },
+
+    mouse_bindings = {
+        {
+            event = {
+                Up = {
+                    streak = 1,
+                    button = "Left"
+                }
+            },
+            mods = "NONE",
+            action = wezterm.action.Nop
+        }, {
+            event = {
+                Up = {
+                    streak = 2,
+                    button = "Left"
+                }
+            },
+            mods = "NONE",
+            action = wezterm.action.Nop
         }
     }
 }
