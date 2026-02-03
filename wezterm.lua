@@ -1,13 +1,30 @@
 local wezterm = require("wezterm")
+
 local act = wezterm.action
+local colors = {
+    black = "#232a31",
+    red = "#f56684",
+    green = "#7cd5a1",
+    yellow = "#f7df6e",
+    blue = "#55b8e2",
+    magenta = "#d7b8ea",
+    cyan = "#61d6c6",
+    foreground = "#f2f0fd",
+    moon = "#f5eb94",
+    pink = "#fabdd4",
+    pluto = "#efa3ce",
+    white = "#f4f2ff",
+    background = "#303942",
+    blue_dark = "#2598c2"
+}
 
 return {
-    enable_wayland = true,
+    enable_wayland = false,
     window_padding = {
-        top = '0.2cell',
+        top = '0.3cell',
         bottom = 1,
-        left = '0.7cell',
-        right = '0.7cell'
+        left = '0.5cell',
+        right = '0.5cell'
     },
 
     window_frame = {
@@ -15,8 +32,8 @@ return {
             family = "Manrope",
             weight = "Medium"
         },
-        active_titlebar_bg = "#232a31",
-        inactive_titlebar_bg = "#232a31"
+        active_titlebar_bg = colors.black,
+        inactive_titlebar_bg = colors.black
     },
 
     font = wezterm.font_with_fallback {
@@ -32,53 +49,56 @@ return {
     default_cursor_style = "BlinkingBar",
 
     colors = {
-        background = "#232a31",
-        foreground = "#f4f2ff",
+        background = colors.black,
+        foreground = colors.white,
 
-        cursor_bg = "#f5eb94",
-        cursor_fg = "#232a31",
-        cursor_border = "#f5eb94",
-        compose_cursor = "#efa3ce",
+        cursor_bg = colors.moon,
+        cursor_fg = colors.black,
+        cursor_border = colors.moon,
+        compose_cursor = colors.pluto,
 
-        selection_bg = "#f5eb94",
-        selection_fg = "#232a31",
+        selection_bg = colors.moon,
+        selection_fg = colors.black,
 
-        scrollbar_thumb = "#2598c2",
-        split = "#d7b8ea",
+        scrollbar_thumb = colors.blue_dark,
+        split = colors.magenta,
 
         ansi = {
-            "#232a31", "#fabdd4", "#7cd5a1", "#f5eb94", "#55b8e2", "#efa3ce", "#61d6c6", "#f4f2ff"
+            colors.black, colors.pink, colors.green, colors.moon, colors.blue, colors.pluto,
+            colors.cyan, colors.white
+
         },
         brights = {
-            "#c2c0cd", "#f56684", "#7cd5a1", "#f7df6e", "#55b8e2", "#d7b8ea", "#61d6c6", "#f2f0fd"
+            "#d2d0dd", colors.red, colors.green, colors.yellow, colors.blue, colors.magenta,
+            colors.cyan, colors.foreground
         },
 
         tab_bar = {
-            background = "#232a31",
-            inactive_tab_edge = "#303942",
+            background = colors.black,
+            inactive_tab_edge = colors.background,
             active_tab = {
-                bg_color = "#55b8e2",
-                fg_color = "#232a31"
+                bg_color = colors.blue,
+                fg_color = colors.black
             },
 
             inactive_tab = {
-                bg_color = "#232a31",
-                fg_color = "#f2f0fd"
+                bg_color = colors.black,
+                fg_color = colors.foreground
             },
 
             inactive_tab_hover = {
-                bg_color = "#2598c2",
-                fg_color = "#232a31"
+                bg_color = colors.blue_dark,
+                fg_color = colors.black
             },
 
             new_tab = {
-                bg_color = "#303942",
-                fg_color = "#f4f2ff"
+                bg_color = colors.background,
+                fg_color = colors.white
             },
 
             new_tab_hover = {
-                bg_color = "#2598c2",
-                fg_color = "#232a31"
+                bg_color = colors.blue_dark,
+                fg_color = colors.black
             }
 
         }
